@@ -1,0 +1,8 @@
+//Area of a Square
+//https://www.codewars.com/kata/5748838ce2fab90b86001b1a/train/javascript
+
+function squareArea(A){
+  let r = (A *  2) / Math.PI;
+  let sqr = r  * r
+  return +sqr.toFixed(2)
+}
