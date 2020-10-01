@@ -1,6 +1,22 @@
 https://www.codewars.com/kata/5a0b4dc2ffe75f72f70000ef/train/javascript
 
+
+//version1
 function findChildren(santasList, children) {
   return Array.from(new Set(children.filter(child => santasList.indexOf(child) !== -1).sort()))
   
+}
+
+
+//version2
+const findChildren = (santasList, children) => {
+  const arr = [];
+  for (const item of santasList) {
+    for (const child of children) {
+      if (item === child && !arr.includes(item)) {
+        arr.push(item)
+      }
+    }
+  }
+  return arr.sort();
 }
