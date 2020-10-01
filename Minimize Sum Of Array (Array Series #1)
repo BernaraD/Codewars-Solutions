@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/5a523566b3bfa84c2e00010b/train/javascript
+
+function minSum(arr) {
+ return  arr.sort((a, b) => a - b).reduce((acc, num) => acc + num * arr.pop(), 0);
+}
