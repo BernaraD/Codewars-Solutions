@@ -1,0 +1,6 @@
+https://www.codewars.com/kata/5a0b4dc2ffe75f72f70000ef/train/javascript
+
+function findChildren(santasList, children) {
+  return Array.from(new Set(children.filter(child => santasList.indexOf(child) !== -1).sort()))
+  
+}
