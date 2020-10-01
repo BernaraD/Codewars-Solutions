@@ -1,0 +1,24 @@
+//https://www.codewars.com/kata/511f11d355fe575d2c000001/train/javascript
+
+//---------------------------------------------------------
+//long cycle version:
+function twoOldestAges(ages){
+let max1 = ages[0];
+  let max2 = ages[1];
+  
+  for (let i = 0; i < ages.length; i++){
+  if (ages[i] > max1){
+    max2 = max1;
+    max1 = ages[i]
+  } else if(ages[i] > max2 && ages[i] < max1){
+    max2 = ages[i]
+  }
+}
+  return [max2, max1]
+  
+}
+//---------------------------------------------------------
+//Short version
+function twoOldestAges(ages){
+  return ages.sort(function(a,b){return a-b;}).slice(-2);
+}
