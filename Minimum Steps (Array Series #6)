@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/5a91a7c5fd8c061367000002/solutions/javascript
+
+function minimumSteps(numbers, value){
+   return numbers.sort((a,b)=>a-b).filter((e,i)=> (value=value-e) > 0).length;
+}
