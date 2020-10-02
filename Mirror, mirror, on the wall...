@@ -6,3 +6,19 @@ function mirror(data) {
   
   return [...sort, ...sort.reverse().slice(1)];
  }
+
+//version 2
+function mirror(data) {
+  
+  let second = data.sort((a, b) => a - b)
+ console.log(second);
+  let newArr = second
+  
+  for (let i = second.length-2; i >= 0; i --){
+    newArr.push(second[i]);
+    
+  }
+  return newArr
+ 
+ }
+console.log(mirror([-8, 42, 18, 0, -16])); 
