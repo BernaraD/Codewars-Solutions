@@ -1,0 +1,11 @@
+//https://www.codewars.com/kata/5a34af40e1ce0eb1f5000036/train/javascript
+
+//super short solution
+function toCsvText(array) {
+   return array.join('\n');
+}
+
+//longer solution
+function toCsvText(array) {
+    return array.map(el => el.map(n => n.toString()).join(',')).join('\n');
+}
