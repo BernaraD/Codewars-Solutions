@@ -1,0 +1,5 @@
+//https://www.codewars.com/kata/54598d1fcbae2ae05200112c/solutions/javascript
+
+function all( arr, fun ){
+  return arr.every(fun)
+}
