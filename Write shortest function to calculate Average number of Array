@@ -1,0 +1,9 @@
+//https://www.codewars.com/kata/56c22cdbe0c0f7cae2001789
+
+function avg(a){
+  let b = a.reduce((acc, el) => ((acc + el)));
+  return b / a.length
+} 
+
+//other solutions
+const avg = (a) => a.reduce((p, c) => p + c) / a.length
