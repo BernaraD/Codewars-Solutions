@@ -5,3 +5,14 @@ function correct(string){
   return string.replace(/5/g, "S").replace(/0/g, "O").replace(/1/g, "I");
 
 }
+
+//second solution
+function swap(ch){
+  let i ='015'.indexOf(ch);
+  let str2 = 'OIS';
+ return 'OIS'[i];
+}
+
+function correct(string){
+  return string.replace(/[015]/g, swap);
+}
