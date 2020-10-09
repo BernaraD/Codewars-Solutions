@@ -1,0 +1,20 @@
+//https://www.codewars.com/kata/57ab2d6072292dbf7c000039/train/javascript
+
+function correctPolishLetters (string) {
+  let arr = ["ą", "ć", "ę", "ł", "ń", "ó", "ś", "ź", "ż"]
+}
+function swap(ch){
+let i = 'ąćęłńóśźż'.indexOf(ch);
+return 'acelnoszz'[i];
+}
+
+function correctPolishLetters (string) {
+return string.replace(/[ąćęłńóśźż]/g, swap);
+}
+
+//second solution from Codewars
+
+function correctPolishLetters (string) {
+  var dict = {'ą':'a','ć':'c','ę':'e','ł':'l','ń':'n','ó':'o','ś':'s','ź':'z','ż':'z'};
+  return string.replace(/[ąćęłńóśźż]/g, match => dict[match]);
+}
