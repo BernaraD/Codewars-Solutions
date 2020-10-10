@@ -1,0 +1,12 @@
+//https://www.codewars.com/kata/56ff6a70e1a63ccdfa0001b1/train/javascript
+
+//shorter solution
+const arrayMadness = (a, b) => a.reduce((acc, x) => acc + x**2, 0) > b.reduce((acc, x) => acc + x**3, 0) 
+
+//my solution
+function arrayMadness(a, b) {
+  let first = a.map(el => el ** 2).reduce((acc, b) => acc + b)
+  let second = b.map(el => el ** 3).reduce((acc, b) => acc + b)
+  
+  return true ? first > second : false
+}
