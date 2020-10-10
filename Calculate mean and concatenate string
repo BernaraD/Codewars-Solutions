@@ -1,0 +1,19 @@
+//https://www.codewars.com/kata/56f7493f5d7c12d1690000b6/solutions
+
+
+//more readable solution
+function mean(lst){
+  var num = 0, str = '';
+  lst.forEach(function(n) {
+    if(!isNaN(n)) {
+      num += +n;
+    }else {
+      str += n;
+    }
+  });  
+  return [num / 10, str];
+}
+
+//super short one from codewars:
+const mean = lst =>
+  lst.reduce(([num, str], val) => isNaN(val) ? [num, str + val] : [(num * 10 + +val) / 10, str], [0, ``]);
