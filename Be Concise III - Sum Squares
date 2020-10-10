@@ -1,0 +1,15 @@
+//https://www.codewars.com/kata/56f8fe6a2e6c0dc83b0008a7/train/javascript
+
+//shorter solution
+function sumSquares(array) {
+ return array.map(el => el ** 2).reduce((acc, b) => acc + b)
+}
+
+//cycle solution
+function sumSquares(array) {
+  var result = 0;
+  for (let i = 0; i < array.length; i++) {
+    result += array[i] ** 2;
+  }
+  return result;
+}
