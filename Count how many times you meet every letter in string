@@ -19,6 +19,20 @@ function countLetters (str) {
 let str = "I like programming in Java Script";
 console.log(countLetters(str));
 
+//second solution
+function countLetters (str) {
+  str = str.toLowerCase().replace(/ /g,'');
+  console.log(str);
+  let obj = {};
+  for (let letter of str){
+    if (obj[letter]){
+      obj[letter]++;
+    } else {
+      obj[letter] = 1;
+    }
+  }
+  return obj
+}
 
 //console.log:
 "ilikeprogramminginjavascript"
