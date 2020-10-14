@@ -1,0 +1,42 @@
+//работа собъектам
+
+//count how many times you meet every letter in string
+//Посчитать, сколько раз встречается каждая буква в строке
+
+function countLetters (str) {
+  str = str.toLowerCase().replace(/ /g,'');
+  console.log(str);
+  let obj = {};
+  for (let letter of str){
+    if (obj.hasOwnProperty(letter)){
+      obj[letter]++;
+    } else {
+      obj[letter] = 1;
+    }
+  }
+  return obj
+}
+let str = "I like programming in Java Script";
+console.log(countLetters(str));
+
+
+//console.log:
+"ilikeprogramminginjavascript"
+[object Object] {
+  a: 3,
+  c: 1,
+  e: 1,
+  g: 2,
+  i: 5,
+  j: 1,
+  k: 1,
+  l: 1,
+  m: 2,
+  n: 2,
+  o: 1,
+  p: 2,
+  r: 3,
+  s: 1,
+  t: 1,
+  v: 1
+}
