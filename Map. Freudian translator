@@ -1,0 +1,11 @@
+//https://www.codewars.com/kata/5713bc89c82eff33c60009f7/train/javascript
+
+function toFreud(string) {
+  
+  if (string.length === 0) return ""
+  
+return string.split(' ').map(el => el.replace(el, "sex")).join(' ')
+}
+
+//shorter solutions:
+let toFreud = s => s.replace(/\w+/g, 'sex');
