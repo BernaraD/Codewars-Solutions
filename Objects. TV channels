@@ -15,3 +15,8 @@ function redarr(arr) {
  }
   return obj
 }
+
+//second solution
+function redarr(arr) {
+  return Object.assign({}, Array.from(new Set(arr)).sort());
+}
