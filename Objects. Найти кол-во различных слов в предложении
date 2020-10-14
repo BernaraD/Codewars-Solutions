@@ -1,0 +1,27 @@
+//5. Найти кол-во различных слов в предложении
+
+function countWords(text){
+  text = text.toLowerCase().split(' ');
+  console.log(text);
+  let words = {};
+  for (let el of text){
+    if (words[el]){
+      words[el]++
+    } else {
+      words[el] = 1
+    }
+    console.log(words);
+  }
+  return Object.keys(words).length
+}
+console.log(countWords("Roses are red violets are blue roses and violets are nice"))
+
+// [object Object] {
+//  and: 1,
+//  are: 3,
+//  blue: 1,
+//  nice: 1,
+//  red: 1,
+//  roses: 2,
+//  violets: 2
+// }
