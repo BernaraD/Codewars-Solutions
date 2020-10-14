@@ -1,0 +1,7 @@
+//Objects. Find total count of letters in string without dublicates
+
+let str = "I like programming in Java Script";
+ str = str.toLowerCase().replace(/ /g, '');
+let arr = str.split('');
+let arr1 = arr.filter((el, i) => i === arr.indexOf(el))
+console.log(arr1.length);
