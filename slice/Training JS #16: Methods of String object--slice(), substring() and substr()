@@ -1,0 +1,15 @@
+//https://www.codewars.com/kata/57274562c8dcebe77e001012/train/javascript
+
+//My solution
+function cutIt(arr){
+let min = arr.map(el => el.length)
+  let minEl = Math.min(...min)
+  
+  return arr.map(el => el.slice(0, minEl))
+}
+
+//shorter solutions
+function cutIt(arr){
+  const minLength = Math.min(...arr.map(x => x.length));
+  return arr.map(x => x.slice(0, minLength));
+}
