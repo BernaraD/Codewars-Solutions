@@ -1,0 +1,14 @@
+//https://www.codewars.com/kata/57613fb1033d766171000d60/solutions/javascript
+
+
+//first solution
+
+function uefaEuro2016(teams, scores){
+ return "At match " + teams[0] + " - " + teams[1] + ", " + ((scores[0] > scores[1]) ? teams[0] + " won!" : (scores[0] < scores[1]) ? teams[1] +" won!":  "teams played draw.");
+};
+
+//second solution
+function uefaEuro2016(teams, scores){
+  var winner = scores[0] > scores[1] ? teams[0] : (scores[1] > scores[0] ? teams[1] : null);
+  return "At match " + teams[0] + " - " + teams[1] + ", " + (winner ? winner + " won!" : "teams played draw.");
+}
