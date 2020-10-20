@@ -1,0 +1,14 @@
+//https://www.codewars.com/kata/5b077ebdaf15be5c7f000077/solutions/javascript
+
+//solution 1
+var countSheep = function (num){
+ let result = ''
+ for (let i = 1; i <= num; i++){
+   result += i.toString() + ' sheep...'
+ }
+   return result
+}
+console.log(countSheep(2));
+
+//solution 2
+countSheep=n=>[...Array(n).keys()].map(x=>`${x+1} sheep...`).join``
