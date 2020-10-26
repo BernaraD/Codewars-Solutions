@@ -1,0 +1,16 @@
+//https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/train/javascript
+
+function removeChar(str){
+str = str.substr(1);
+
+str = str.substring(0,str.length-1); 
+
+  return str
+};
+
+
+//shorter solution
+
+function removeChar(str) {
+  return str.slice(1, -1);
+}
