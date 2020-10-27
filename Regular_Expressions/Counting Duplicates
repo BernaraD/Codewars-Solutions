@@ -1,0 +1,15 @@
+//https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/solutions/javascript
+
+function duplicateCount(text){
+ let newText = text.toLowerCase().split('');
+ let count = 0;
+ return newText.filter((el, i) => 
+                    newText.indexOf(el) != newText.lastIndexOf(el) 
+                     && i === newText.indexOf(el)).length
+}
+console.log(duplicateCount("aabbcde"));
+
+//solution with REGEX
+function duplicateCount(text){
+  return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+}
