@@ -1,0 +1,15 @@
+//https://www.codewars.com/kata/5b180e9fedaa564a7000009a/train/javascript
+
+function solve (s){
+  let upperCount = 0, lowerCount = 0;
+  
+  for (let i = 0; i < s.length; i++){
+    if(s[i] === s[i].toLowerCase()) lowerCount++;
+    if(s[i] === s[i].toUpperCase()) upperCount++;
+    
+  }
+  return upperCount > lowerCount ? s.toUpperCase() : s.toLowerCase()
+}
+
+//short solution but hard to read
+const solve = s => s.replace(/[A-Z]/g,'').length < s.length/2 ? s.toUpperCase() : s.toLowerCase()
