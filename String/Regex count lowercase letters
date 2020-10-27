@@ -1,0 +1,16 @@
+//https://www.codewars.com/kata/56a946cd7bd95ccab2000055/train/javascript
+
+function lowercaseCount(str){
+let count=0,len=str.length;
+  
+  for(let i = 0; i < len; i++) {
+    if(/[a-z]/.test(str.charAt(i))) count++;
+  }
+  return count;
+}
+
+//The charAt() method returns the character at the specified index in a string.
+
+//The index of the first character is 0, the second character is 1, and so on.
+
+//Tip: The index of the last character in a string is string.length-1, the second last character is string.length-2, and so on (See "More Examples").
