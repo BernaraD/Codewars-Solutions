@@ -1,0 +1,19 @@
+//https://www.codewars.com/kata/52bc74d4ac05d0945d00054e/solutions/javascript
+function firstNonRepeatingLetter(s) {
+  let arr = s.toLowerCase().split('');
+  
+  let res = arr.filter(el => arr.indexOf(el) === arr.lastIndexOf(el))
+  if (res.length === 0) return ''
+  else return s.includes(res[0]) ? res[0] : res[0].toUpperCase()
+  
+}
+
+
+//second solution
+function firstNonRepeatingLetter(s) {
+  var t=s.toLowerCase();
+  for (var x=0;x<t.length;x++)
+    if(t.indexOf(t[x]) === t.lastIndexOf(t[x]))
+      return s[x];
+  return "";
+}
