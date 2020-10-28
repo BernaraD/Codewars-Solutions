@@ -1,0 +1,16 @@
+//https://www.codewars.com/kata/57f8ee485cae443c4d000127/solutions/javascript
+
+//Modify the spacify function so that it returns the given string with spaces inserted between each character.
+
+//spacify("hello world") // returns "h e l l o   w o r l d"
+
+//My solution
+function spacify(str) {
+ return  str.split('').map(el => el + " ").join('').slice(0, -1)
+         
+}
+
+//short solution
+function spacify(str) {
+  return str.split("").join(" ");
+}
