@@ -1,0 +1,23 @@
+//https://app.pasv.us/course/5d1cbf67086fc30038bf1859/lesson/5d2eb8c10f1c8500385e7067
+
+//Палиндром - слово, которое читается одинаково справа налево и слева направо.
+
+//Дано слово. Определите, является ли это слово палиндромом.
+
+//Напишите функцию с именем isPalindrome, которая принимает слово word в качестве аргумента и возвращает true, если слово является палиндромом, и false - в противном случае. Использовать метод reverse() в этом задании не разрешено.
+
+//Примеры:
+
+//функция isPalindrome("abc") должна возвратить false;
+//функция isPalindrome("abba") должна возвратить true.
+
+function isPalindrome(word){
+let newWord = ''
+ for (let i = word.length - 1; i >= 0; i--) {
+  newWord += word[i]
+}
+  if (newWord === word){
+    return true
+  }
+  else return false
+}
