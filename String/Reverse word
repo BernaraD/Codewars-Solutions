@@ -1,0 +1,23 @@
+https://app.pasv.us/course/5d1cbf67086fc30038bf1859/lesson/5d2eb8c10f1c8500385e7067
+
+//Дано слово. Получите слово, прочитав его справа налево, т.е. "переверните" это слово.
+
+//Напишите функцию с именем reverseWord, которая принимает слово word в качестве аргумента и возвращает строку, содержащую перевернутое слово. Использовать метод reverse() в этом задании не разрешено.
+
+//Примеры:
+
+//функция reverseWord("abc") должна возвратить "cba";
+//функция reverseWord("No") должна возвратить "oN"`.
+//Write your solution here
+
+
+function reverseWord(word){
+let newWord = ''
+ for (let i = word.length - 1; i >= 0; i--) {
+  newWord += word[i]
+}
+  return newWord
+}
+
+
+//split('') reverse() join()
