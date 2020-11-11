@@ -1,0 +1,22 @@
+//https://app.pasv.us/course/5d1cbf67086fc30038bf1859/lesson/5dcb0746a7c36b003ccf203b
+
+//Является ли первая буква имени прописной?
+
+//Дана строка, содержащая имя пользователя. Если первая буква имени прописная (UpperCase), возвратить сообщение "Welcome, sir", в противном случае возвратить "Howdy".
+
+//Напишите функцию с именем isNameStartsWithUpper, которая принимает строку name, содержащую имя пользователя в качестве аргумента, и возвращает строку "Welcome, sir", если первая буква имени заглавная (прописная) или "Howdy", если первая буква имени строчная.
+
+//Примеры:
+
+//функция isNameStartsWithUpper('Alex') должна возвратить "Welcome, sir";
+//функция isNameStartsWithUpper('alice') должна возвратить "Howdy".
+
+function isNameStartsWithUpper(name){
+ if (name.charAt(0) == name.charAt(0).toUpperCase()) {
+         return "Welcome, sir";
+      }
+      if (name.charAt(0) == name.charAt(0).toLowerCase()){
+         return "Howdy";
+      }
+   
+}
