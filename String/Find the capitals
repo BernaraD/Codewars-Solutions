@@ -1,0 +1,27 @@
+//https://www.codewars.com/kata/539ee3b6757843632d00026b/solutions
+
+//Write a function that takes a single string (word) as argument. The function must return an ordered list containing the indexes of all capital letters in the string.
+
+//Example
+//Test.assertSimilar( capitals('CodEWaRs'), [0,3,4,6] );
+
+
+===========================================================================
+//solution 1
+
+var capitals = function (word) {
+  return word.split('')
+             .map(function(l, i) { if (l.toUpperCase() === l) return i; })
+             .filter(function(i) { return i != null })
+};
+
+
+=============================================================================
+//Second solution:
+var capitals = function (word) {
+  var caps = [];
+  for(var i = 0; i < word.length; i++) {
+    if(word[i].toUpperCase() == word[i]) caps.push(i);
+  }
+  return caps;
+};
