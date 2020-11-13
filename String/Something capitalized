@@ -1,0 +1,3 @@
+//https://www.codewars.com/kata/56d93f249c844788bc000002/solutions
+
+const testit = s => s.replace(/.\b/g, c => c.toUpperCase())
