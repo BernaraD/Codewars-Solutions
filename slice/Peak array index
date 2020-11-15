@@ -12,3 +12,12 @@ function peak(arr) {
   
   return res;
 }
+
+
+_______________________________________
+second solution
+
+const sum = array => array.reduce((sum, num) => sum + num, 0)
+
+const peak = array => array.findIndex((value, index, array) =>
+  sum(array.slice(0, index)) === sum(array.slice(index + 1)))
