@@ -1,0 +1,15 @@
+//
+
+function validPassword(password){
+let str = password
+  let num = password.length
+ 
+  if (num < 7){
+    while (num < 7){
+      str += '$'
+      num++
+    }
+    
+  }
+  return str
+}
