@@ -1,0 +1,11 @@
+//https://www.codewars.com/kata/5412509bd436bd33920011bc/train/javascript
+
+function maskify(cc) {
+return cc.split('').map((el, idx) => idx < cc.length - 4 ? "#" : el).join('')
+}
+
+
+==============================
+function maskify(cc) {
+  return cc.replace(/.(?=.{4})/g, "#");
+}
