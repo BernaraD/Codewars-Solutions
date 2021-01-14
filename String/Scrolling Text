@@ -1,0 +1,25 @@
+//https://www.codewars.com/kata/5a995c2aba1bb57f660001fd/train/javascript
+
+function scrollingText(text){
+  
+ text.toUpperCase()
+  let temp = []
+ 
+ for (let i = 0; i < text.length; i++){
+   temp.push((text.slice(i) + text.slice(0, i)).toUpperCase())
+  
+ }
+  return temp
+  
+  
+}
+console.log(scrollingText("abc"));//["ABC","BCA","CAB"]
+
+===================================================================
+
+function scrollingText(text){
+  
+  text = text.toUpperCase()
+  
+  return [...text].map( (_, i) => text.slice(i) + text.slice(0, i) )
+}
