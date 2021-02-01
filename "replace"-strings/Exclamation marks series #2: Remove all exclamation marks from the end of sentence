@@ -1,0 +1,44 @@
+//https://www.codewars.com/kata/57faece99610ced690000165/solutions/javascript
+
+Description:
+Remove all exclamation marks from the end of sentence.
+
+Examples
+remove("Hi!") === "Hi"
+remove("Hi!!!") === "Hi"
+remove("!Hi") === "!Hi"
+remove("!Hi!") === "!Hi"
+
+**************************************************************************
+Option 1:
+function remove(s) {
+  let result = s;
+
+ 
+  while (result[result.length - 1] === "!") {
+    result = result.slice(0, -1);
+  }
+
+  return result;
+}
+
+************************************************************************
+Option 2:
+const remove = s => s.replace(/!+$/, '');
+
+Option 3:
+function remove(s) {
+  return s.replace(/!*$/,'')
+}
+
+***************************************************************************
+
+Option 4:
+function remove(s){
+ let res = s;
+  for(let i = s.length-1; i >= 0; i-- ){
+    if(s[i] == "!"){res = res.slice(0, -1)}
+    else{break;}
+  }
+  return res;  
+}
