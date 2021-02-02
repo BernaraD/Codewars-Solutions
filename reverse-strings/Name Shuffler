@@ -1,0 +1,19 @@
+//https://www.codewars.com/kata/559ac78160f0be07c200005a/solutions/javascript
+
+Write a function that returns a string in which firstname is swapped with last name.
+
+
+**********************************************************
+Solution 1:
+function nameSuffle(str){
+  return str.split(' ').reverse().join(' ')
+}
+
+**********************************************************
+Solution 2:
+function nameShuffler(str){
+  let lastName = str.split(' ')[1]
+  let firstName = str.split(' ')[0]
+  
+  return `${lastName} ${firstName}`
+}
