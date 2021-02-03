@@ -1,0 +1,14 @@
+Проверьте в консоли, правильный ли результат получен в примере ниже?
+
+
+let str = 'cookies';
+let str2 = str.toUpperCase();
+let res = '';
+for (let i = 0; i < str.length - 1; i++) {
+  if (i === str.length - 2) {
+    res += str2[i] + str[i];
+  } else {
+    res += str2[i] + str[i] + ' ';
+  }
+}
+res = res.split(' '); // ["Cc", "Oo", "Oo", "Kk", "Ii", "Ee"] // true
