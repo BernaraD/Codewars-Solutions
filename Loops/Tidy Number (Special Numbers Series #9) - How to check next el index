@@ -1,0 +1,24 @@
+//https://www.codewars.com/kata/5a87449ab1710171300000fd/train/javascript
+
+Check if the next element is greater then the previos one
+
+For example : 
+  Test.assertEquals(tidyNumber(12),true);
+  Test.assertEquals(tidyNumber(102),false);
+  Test.assertEquals(tidyNumber(9672),false);
+  Test.assertEquals(tidyNumber(2789),true);
+  Test.assertEquals(tidyNumber(2335),true);
+
+
+************************************************************************
+Solution 1:
+
+function tidyNumber(n){
+  
+  let s = n.toString()
+   
+  for (let i = 0; i < s.length -1; i++){
+   if (s[i] > s[i+1])return false
+  }
+  return true
+}
