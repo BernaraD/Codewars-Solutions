@@ -1,0 +1,24 @@
+//https://www.codewars.com/kata/5aee86c5783bb432cd000018/train/javascript
+
+Your fellow coders have bought you several drinks tonight in the form of a string. Return a string suggesting how many glasses of water you should drink to not be hungover.
+
+Examples
+"1 beer"  -->  "1 glass of water"
+because you drank one standard drink
+
+"1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer"  -->  "10 glasses of water"
+because you drank ten standard drinks
+
+
+**************************************************************************************
+Solution 1:
+
+function hydrate(s) {
+  let total = 0;
+  for (let i = 0; i <s.length; i++){
+    if (Number(s[i]) > 0){
+      total += +s[i]
+    }
+  }
+  return total > 1? `${total} glasses of water` : `1 glass of water`
+}
