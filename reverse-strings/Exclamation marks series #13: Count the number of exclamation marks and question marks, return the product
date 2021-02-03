@@ -1,0 +1,47 @@
+https://www.codewars.com/kata/57fb142297e0860073000064/train/javascript
+
+Description:
+Count the number of exclamation marks and question marks, return the product.
+
+Examples
+Product("") == 0
+product("!") == 0
+Product("!ab? ?") == 2
+Product("!!") == 0
+Product("!??") == 2
+Product("!???") == 3
+Product("!!!??") == 6
+Product("!!!???") == 9
+Product("!???!!") == 9
+Product("!????!!!?") == 20
+
+
+*********************************************************
+Solution: 1
+
+function product(s){
+  let countExl = 0;
+  let countQues = 0;
+  
+  let arr = s.split('')
+  
+ for (let i = 0; i < arr.length; i++){
+   if (arr[i] === "!"){
+     countExl = countExl + 1; 
+   } 
+   else countQues = countQues + 1
+    
+ } 
+  return countExl * countQues
+  
+  
+  
+  *****************************************************
+  Solution 2:
+  
+ function product(s){
+  return s.split('').filter(
+    function(char){
+    return char=='?';}).length*s.split('').filter(function(char){return char=='!';}).length;
+}
+  
