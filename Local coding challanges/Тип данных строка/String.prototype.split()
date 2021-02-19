@@ -1,0 +1,32 @@
+//Выведите строку по одному слову в столбик, выравнивание по правому краю.
+
+Функция получает строку из нескольких слов. Выведите слова в столбик, выравнивание по правому краю.
+
+Например, text = 'I will get everything I want'. Функция должна возвратить этот текст в виде строки, содержащей слова:
+
+"         I
+      will
+       get
+everything
+         I
+      want"
+Напишите функцию с именем wordsInColumn, которая принимает строку text в качестве аргумента и возвращает строку, разделенную на слова, которые выводятся по одному в строке с выравниванием по правому краю.
+
+Пример:
+
+функция wordsInColumn("Enjoy every moment") должна возвратить:
+" Enjoy
+ every
+moment"
+
+***************************************************************************************
+function wordsInColumn(text){
+const words = text.split(' ');
+  
+  const longestWord = words.reduce((a, b) => (a.length > b.length ? a : b))
+  
+  
+  const padGivenWords = words.map(word => word.padStart(longestWord.length));
+  
+ return padGivenWords.join('\n')
+}
