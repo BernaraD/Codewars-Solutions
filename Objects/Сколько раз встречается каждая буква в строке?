@@ -1,0 +1,23 @@
+//Решение задач с Ларисой.
+//https://jsbin.com/surowelugo/edit?js,console
+// Задача с white board interview
+
+function countLetters(str){
+  
+//deleting spaces and turning all to the same letter case 
+  str = str.toLowerCase().replace(/ /g, '')
+  let obj = {}
+
+//  
+  for (let char of str){
+    if ( obj[char] ){
+      obj[char]++
+    } else {
+      obj[char] = 1
+    }
+  }
+  
+  return obj
+}
+
+console.log(countLetters('I like JavaScript and Python'));
