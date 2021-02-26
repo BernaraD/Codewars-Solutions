@@ -1,0 +1,19 @@
+//https://jsbin.com/surowelugo/edit?js,console
+//Count words in the text. How many times words in the text.
+
+*****************************************************************
+function countWords(text){
+   text = text.toLowerCase().split(' ')
+   let obj = {}
+  
+   for (let word of text){
+     if (obj[word]){
+       obj[word]++
+     } else {
+       obj[word] = 1
+     }
+   }
+   console.log(Object.keys(obj).length);
+   return obj
+ }
+ console.log(countWords('Roses are red violetes are blue roses and violets are nice'));
