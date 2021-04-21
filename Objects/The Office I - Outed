@@ -1,0 +1,35 @@
+//https://www.codewars.com/kata/57ecf6efc7fe13eb070000e1/train/javascript
+
+
+function outed(meet, boss){
+
+let total = 0
+let totalPeople =0
+let score = 0
+
+
+for (let key in meet){
+ if (key === boss){
+   score += meet[key] * 2
+   totalPeople++
+ } else {
+   score += meet[key]
+   totalPeople++
+ }
+ 
+}
+ total = score / totalPeople
+ return total <= 5 ? 'Get Out Now!' : 'Nice Work Champ!'
+  
+
+} 
+
+
+
+//Shorter solution
+
+function outed(meet, boss) {
+  let names = Object.keys(meet)
+  let score = names.reduce((s,v) => s + meet[v], 0) + meet[boss]
+  return score / names.length > 5 ? 'Nice Work Champ!' : 'Get Out Now!'
+}
