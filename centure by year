@@ -1,0 +1,10 @@
+//What centure is it, if you know the year
+
+function solution (year) {
+  
+  if (year % 100 == 0){
+    return Math.trunc(year /100)
+  } else return Math.trunc(year / 100) + 1
+}
+
+console.log(solution(1905));
